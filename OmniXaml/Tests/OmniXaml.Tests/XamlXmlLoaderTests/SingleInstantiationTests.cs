@@ -52,6 +52,13 @@
         {
             var actual = Loader.Load(Dummy.DifferentNamespaces);
             Assert.IsInstanceOfType(actual, expectedType);
-        }       
+        }
+
+        [TestMethod]
+        public void ClassDirective()
+        {
+            var actual = Loader.Load(Dummy.ClassDirective);
+            Assert.IsInstanceOfType(actual, typeof(DummyDerived));
+        }
     }
 }

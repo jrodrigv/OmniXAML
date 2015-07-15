@@ -13,15 +13,36 @@ namespace OmniXaml.NewAssembler.Commands
         {
             if (!StateCommuter.IsProcessingValuesAsCtorArguments)
             {
-                StateCommuter.RaiseLevel();
-                StateCommuter.Instance = value;
-                StateCommuter.AssignChildToParentProperty();
-                StateCommuter.DecreaseLevel();
+                ProcessAsMemberValue();
             }
             else
             {
-                StateCommuter.AddCtorArgument(value);
+                ProcessAsCtorArgument();
             }
+        }
+
+        private void ProcessAsCtorArgument()
+        {
+            StateCommuter.AddCtorArgument(value);
+        }
+
+        private void ProcessAsMemberValue()
+        {
+            StateCommuter.RaiseLevel();
+            StateCommuter.Instance = value;
+
+            AssignValueDirectlyWhenMemberIsNotDirective();
+        }
+
+        private void AssignValueDirectlyWhenMemberIsNotDirective()
+        {
+            if (StateCommuter.PreviousMember.IsDirective)
+            {
+                return;
+            }
+
+            StateCommuter.AssignChildToParentProperty();
+            StateCommuter.DecreaseLevel();
         }
     }
 }

@@ -19,9 +19,7 @@ namespace OmniXaml.Tests.XamlXmlReaderTests
         private readonly XamlNodeBuilder nodeBuilder;
 
         public NodeDumpTests()
-        {
-      
-
+        {     
             nodeBuilder = new XamlNodeBuilder(WiringContext.TypeContext);
         }
 

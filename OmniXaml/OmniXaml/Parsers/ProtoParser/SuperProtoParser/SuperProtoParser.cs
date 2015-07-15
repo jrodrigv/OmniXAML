@@ -40,7 +40,16 @@
 
             yield return elementToInject;
 
+            foreach (var node in InjectClassDirectiveIfAny(attributeFeed)) yield return node;
             foreach (var node in attributes.RawAttributes.Select(a => ConvertAttributeToNode(owner, a))) yield return node;
+        }
+
+        private IEnumerable<ProtoXamlNode> InjectClassDirectiveIfAny(AttributeFeed attributeFeed)
+        {
+            if (attributeFeed.Class != null)
+            {
+                yield return nodeBuilder.Attribute(new XamlDirective("Class"), attributeFeed.Class.Value, null);
+            }
         }
 
         private IEnumerable<ProtoXamlNode> ParseExpandedElement(XamlType xamlType, string prefix, AttributeFeed attributes)

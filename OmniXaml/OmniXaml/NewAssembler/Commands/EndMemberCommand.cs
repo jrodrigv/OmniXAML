@@ -1,5 +1,6 @@
 namespace OmniXaml.NewAssembler.Commands
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
@@ -16,19 +17,53 @@ namespace OmniXaml.NewAssembler.Commands
 
         public override void Execute()
         {
-            if (StateCommuter.IsProcessingValuesAsCtorArguments)
+            if (PreviousMemberIsDirective)
+            {
+                ProcessDirective();
+            }
+            else if (StateCommuter.IsProcessingValuesAsCtorArguments)
             {
                 AdaptCurrentCtorArgumentsToCurrentType();
             }
-
-            if (IsTherePendingInstanceWaitingToBeAssigned)
+            else if (IsTherePendingInstanceWaitingToBeAssigned)
             {
                 StateCommuter.AssociateCurrentInstanceToParent();
                 StateCommuter.DecreaseLevel();
             }
         }
 
-        public bool IsTherePendingInstanceWaitingToBeAssigned => StateCommuter.HasCurrentInstance && StateCommuter.Member == null;
+        private void ProcessDirective()
+        {
+            if (Equals(StateCommuter.PreviousMember, CoreTypes.Class))
+            {
+                if (StateCommuter.Level == 2)
+                {
+                    var associatedSubType = GetAssociatedSubType();
+                    StateCommuter.PreviousXamlType = associatedSubType;
+                    StateCommuter.CreateInstanceOfCurrentXamlTypeIfNotCreatedBefore();
+                    StateCommuter.DecreaseLevel();
+                }
+            }
+        }
+
+        private XamlType GetAssociatedSubType()
+        {
+            var typeName = StateCommuter.Instance as string;
+
+            if (typeName == null)
+            {
+                throw new InvalidCastException("Cannot get the associated type from the current instance");
+            }
+
+            var assemblyOfBase = StateCommuter.PreviousXamlType.UnderlyingType.GetTypeInfo().Assembly.GetName();
+            var type = Type.GetType(typeName + ", " + assemblyOfBase, true);
+        
+            return typeContext.GetXamlType(type);
+        }
+
+        private bool PreviousMemberIsDirective => StateCommuter.PreviousMember?.IsDirective ?? false;
+
+        private bool IsTherePendingInstanceWaitingToBeAssigned => StateCommuter.HasCurrentInstance && StateCommuter.Member == null;
 
         private void AdaptCurrentCtorArgumentsToCurrentType()
         {

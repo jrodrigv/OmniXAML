@@ -19,6 +19,7 @@ namespace OmniXaml.Parsers.ProtoParser.SuperProtoParser
             var prefixDefinitions = new Collection<NsPrefix>();
             var attributes = new Collection<UnprocessedAttribute>();
 
+            RawDirective classDirective = null;
             if (reader.MoveToFirstAttribute())
             {
                 do
@@ -28,6 +29,10 @@ namespace OmniXaml.Parsers.ProtoParser.SuperProtoParser
                     if (longDescriptor.Contains("xmlns"))
                     {
                         prefixDefinitions.Add(GetPrefixDefinition());
+                    }
+                    else if (reader.Name == "x:Class")
+                    {
+                        classDirective = GetClassDirective();
                     }
                     else
                     {
@@ -39,7 +44,12 @@ namespace OmniXaml.Parsers.ProtoParser.SuperProtoParser
                 reader.MoveToElement();
             }
 
-            return new AttributeFeed(prefixDefinitions, attributes);
+            return new AttributeFeed(prefixDefinitions, attributes) { Class = classDirective };
+        }
+
+        private RawDirective GetClassDirective()
+        {
+            return new RawDirective("Class", reader.Value);
         }
 
         private UnprocessedAttribute GetAttribute()
@@ -52,5 +62,17 @@ namespace OmniXaml.Parsers.ProtoParser.SuperProtoParser
             var dicotomize = reader.Name.Dicotomize(':');
             return new NsPrefix(dicotomize.Item2 ?? string.Empty, reader.Value);
         }
+    }
+
+    internal class RawDirective
+    {
+        public RawDirective(string identifier, string value)
+        {
+            Identifier = identifier;
+            Value = value;
+        }
+
+        public string Identifier { get; set; }
+        public string Value { get; set; }
     }
 }

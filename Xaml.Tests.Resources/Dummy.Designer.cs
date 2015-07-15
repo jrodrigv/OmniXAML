@@ -95,6 +95,15 @@ namespace Xaml.Tests.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;DummyClass xmlns=&quot;root&quot;&gt;&lt;/DummyClass&gt;.
+        /// </summary>
+        public static string ClassDirective {
+            get {
+                return ResourceManager.GetString("ClassDirective", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;DummyClass xmlns=&quot;root&quot;&gt;
         ///  &lt;DummyClass.Items&gt;
         ///    &lt;Item/&gt;

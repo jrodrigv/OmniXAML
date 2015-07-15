@@ -16,5 +16,6 @@ namespace OmniXaml.Parsers.ProtoParser.SuperProtoParser
 
         public IEnumerable<UnprocessedAttribute> RawAttributes => new ReadOnlyCollection<UnprocessedAttribute>(attributes);
         public IEnumerable<NsPrefix> PrefixRegistrations => new ReadOnlyCollection<NsPrefix>(prefixDefinitions);
+        public RawDirective Class { get; set; }
     }
 }

@@ -1,0 +1,3 @@
+﻿<DummyClass x:Class="OmniXaml.Tests.Classes.DummyDerived"
+            xmlns:x="dd"
+            xmlns="root" />

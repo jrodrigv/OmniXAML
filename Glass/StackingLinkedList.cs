@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public class StackingLinkedList<T>
+    public class StackingLinkedList<T> 
     {
         private readonly LinkedList<T> linkedList = new LinkedList<T>();
 
@@ -27,7 +27,7 @@
         public int Count => linkedList.Count;
         public T PreviousValue
         {
-            get { return Previous.Value; }
+            get { return Previous != null ? Previous.Value : default(T); }
             set { Previous.Value = value; }
         }  
     }  

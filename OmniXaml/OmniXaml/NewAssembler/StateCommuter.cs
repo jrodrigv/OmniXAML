@@ -130,9 +130,9 @@ namespace OmniXaml.NewAssembler
             set { CurrentValue.Collection = value; }
         }
 
-        public XamlMember PreviousMember => PreviousValue.XamlMember;
-        public object PreviousInstance => PreviousValue.Instance;
-        public bool PreviousIsHostingChildren => PreviousValue.Collection != null;
+        public XamlMember PreviousMember => PreviousValue?.XamlMember;
+        public object PreviousInstance => PreviousValue?.Instance;
+        private bool PreviousIsHostingChildren => PreviousValue?.Collection != null;
 
         public bool IsProcessingValuesAsCtorArguments => CurrentValue.IsProcessingValuesAsCtorArguments;
         public IList<ConstructionArgument> CtorArguments => CurrentValue.CtorArguments;
@@ -184,6 +184,11 @@ namespace OmniXaml.NewAssembler
         public bool WasAssociatedRightAfterCreation => CurrentValue.WasAssociatedRightAfterCreation;
 
         public ValuePipeline ValuePipeline => valuePipeline;
+        public XamlType PreviousXamlType
+        {
+            get { return PreviousValue.XamlType; }
+            set { PreviousValue.XamlType = value; }
+        }
 
         public void AssociateCurrentInstanceToParentForCreation()
         {

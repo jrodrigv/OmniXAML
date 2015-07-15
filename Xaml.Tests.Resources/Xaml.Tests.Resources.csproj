@@ -245,7 +245,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Xaml\Dummy\SingleInstance.xaml">
+    <None Include="Xaml\Dummy\ClassDirective.xaml">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -306,6 +306,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Xaml\Dummy\StringProperty.xaml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Xaml\Dummy\SingleInstance.xaml">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

@@ -52,7 +52,7 @@ namespace OmniXaml.Parsers.ProtoParser.SuperProtoParser
 
         private bool ShouldIgnore => IsDesignerOnly || IsUnsupportedAttribute;
         private bool IsUnsupportedAttribute => UnsupportedAttributes.Contains(Name);
-        public IEnumerable<string> UnsupportedAttributes { get; } = new Collection<string> { "x:Name", "x:Key", "x:Class" };
+        public IEnumerable<string> UnsupportedAttributes { get; } = new Collection<string> { "x:Name", "x:Key", };
 
         private bool IsDesignerOnly => xmlReader.Prefix == "d" || Name == "mc:Ignorable";
 
