@@ -83,6 +83,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CSharpObjectAssembler.cs" />
+    <Compile Include="CSharpObjectAssemblerTests.cs" />
     <Compile Include="LookaheadBufferTests.cs" />
     <Compile Include="MetadataProvider.cs" />
     <Compile Include="NameScopeTests.cs" />
