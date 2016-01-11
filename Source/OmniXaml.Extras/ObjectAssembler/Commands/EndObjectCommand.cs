@@ -26,7 +26,9 @@ namespace OmniXaml.Extras.ObjectAssembler.Commands
                 StateCommuter.NotifyEnd();
             }
 
-            StateCommuter.Builder.Append("};");
+            var suffix = StateCommuter.Level == 1 ? ";" : ",";
+            var trailing = StateCommuter.Level == 1 ? "" : " ";
+            StateCommuter.Builder.Append($"}}{suffix}{trailing}");
             StateCommuter.DecreaseLevel();
         }
 

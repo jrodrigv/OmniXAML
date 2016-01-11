@@ -4,6 +4,7 @@
     using ObjectAssembler;
     using Resources;
     using Xunit;
+    using Xunit.Sdk;
 
     public class CSharpObjectAssemblerTests : GivenARuntimeTypeSourceWithNodeBuilders
     {
@@ -73,20 +74,28 @@
             sut.Process(source.ObjectWithTwoMembers);
 
             var result = sut.Result;
-            Assert.Equal(result, "var root = new DummyClass { SampleProperty = \"Property!\", AnotherProperty = \"Another!\", };");
+            Assert.Equal("var root = new DummyClass { SampleProperty = \"Property!\", AnotherProperty = \"Another!\", };", result);
         }
 
-        //    [TestMethod]
-        //    public void ObjectWithChild()
-        //    {
-        //        sut.Process(source.ObjectWithChild);
+        [Fact]
+        public void ObjectWithChild()
+        {
+            var sut = CreateSut();
+            sut.Process(source.ObjectWithChild);
 
-        //        var result = sut.Result;
-        //        var property = ((DummyClass)result).Child;
+            var result = sut.Result;
+            Assert.Equal("var root = new DummyClass { Child = new ChildClass { }, };", result);
+        }
 
-        //        Assert.IsInstanceOfType(result, typeof(DummyClass));
-        //        Assert.IsInstanceOfType(property, typeof(ChildClass));
-        //    }
+        [Fact(Skip = "No worky")]
+        public void CollectionWithMoreThanOneItem()
+        {
+            var sut = CreateSut();
+            sut.Process(source.CollectionWithMoreThanOneItem);
+
+            var result = sut.Result;
+            Assert.Equal("var root = new DummyClass { Child = new ChildClass { }, };", result);
+        }
 
         //    [TestMethod]
         //    public void WithCollection()

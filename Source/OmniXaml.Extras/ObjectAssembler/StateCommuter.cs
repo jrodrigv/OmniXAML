@@ -97,7 +97,8 @@ namespace OmniXaml.Extras.ObjectAssembler
             {
                 MaterializeInstanceOfCurrentType();
                 var typeName = Current.XamlType.Name;
-                Builder.Append($"var root = new {typeName} {{ ");
+                var prefix = Level == 1 ? "var root = " : string.Empty;
+                Builder.Append($"{prefix}new {typeName} {{ ");
             }
 
             SaveCurrentInstanceToTopDownEnvironment();
