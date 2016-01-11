@@ -83,7 +83,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CSharpObjectAssembler.cs" />
     <Compile Include="CSharpObjectAssemblerTests.cs" />
     <Compile Include="LookaheadBufferTests.cs" />
     <Compile Include="MetadataProvider.cs" />
@@ -123,6 +122,10 @@
     <ProjectReference Include="..\..\Glass\Glass.csproj">
       <Project>{B719FF91-BC7A-4145-8597-811D504FCFEF}</Project>
       <Name>Glass</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OmniXaml.Extras\OmniXaml.Extras.csproj">
+      <Project>{21cae4f6-6ccf-4b5a-946e-f71eb168fb17}</Project>
+      <Name>OmniXaml.Extras</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\OmniXaml.Services.DotNetFx\OmniXaml.Services.DotNetFx.csproj">
       <Project>{70B12EBB-E332-402E-BAF0-C55F38A6B753}</Project>

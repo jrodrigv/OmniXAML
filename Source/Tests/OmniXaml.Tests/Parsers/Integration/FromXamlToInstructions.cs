@@ -4,7 +4,7 @@
     using System.IO;
     using System.Linq;
     using System.Xml;
-    using Common.NetCore;
+    using Common;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using OmniXaml.Parsers.Parser;
     using OmniXaml.Parsers.ProtoParser;
@@ -12,7 +12,7 @@
     using Xaml.Tests.Resources;
 
     [TestClass]
-    public class FromXamlToInstructions : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class FromXamlToInstructions : GivenARuntimeTypeSourceWithNodeBuilders
     {
         private readonly InstructionResources source;
 

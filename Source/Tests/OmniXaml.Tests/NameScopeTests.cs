@@ -2,12 +2,12 @@ namespace OmniXaml.Tests
 {
     using Classes;
     using Classes.WpfLikeModel;
-    using Common.NetCore;
+    using Common;
     using ObjectAssembler;
     using Resources;
     using Xunit;
 
-    public class NameScopeTests : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class NameScopeTests : GivenARuntimeTypeSourceWithNodeBuilders
     {
         private readonly InstructionResources source;
         private readonly ObjectAssembler sut;

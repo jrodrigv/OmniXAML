@@ -3,12 +3,12 @@
     using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
-    using Common.NetCore;
+    using Common;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Resources;
 
     [TestClass]
-    public class MemberDependencyNodeSorterTests : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class MemberDependencyNodeSorterTests : GivenARuntimeTypeSourceWithNodeBuilders
     {
         private readonly MemberDependencyNodeSorter memberDependencyNodeSorter = new MemberDependencyNodeSorter();
         private readonly InstructionResources resources;

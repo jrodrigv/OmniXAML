@@ -2,13 +2,13 @@ namespace OmniXaml.Tests
 {
     using System.Collections.ObjectModel;
     using Classes;
-    using Common.NetCore;
+    using Common;
     using Glass;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using ObjectAssembler;
 
     [TestClass]
-    public class ObjectAssemblerStateCommutationTests : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class ObjectAssemblerStateCommutationTests : GivenARuntimeTypeSourceWithNodeBuilders
     {  
         [TestMethod]
         public void StartObjectShouldSetTheXamlType()

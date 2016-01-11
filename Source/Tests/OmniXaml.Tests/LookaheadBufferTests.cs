@@ -4,12 +4,12 @@
     using System.Linq;
     using Classes;
     using Classes.WpfLikeModel;
-    using Common.NetCore;
+    using Common;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Resources;
 
     [TestClass]
-    public class LookaheadBufferTests : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class LookaheadBufferTests : GivenARuntimeTypeSourceWithNodeBuilders
     {
         private InstructionResources resources;
 

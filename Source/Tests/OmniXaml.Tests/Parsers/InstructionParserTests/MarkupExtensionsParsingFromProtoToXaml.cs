@@ -3,12 +3,12 @@
     using System.Collections.Generic;
     using System.Linq;
     using Classes;
-    using Common.NetCore;
+    using Common;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using OmniXaml.Parsers.Parser;
 
     [TestClass]
-    public class MarkupExtensionsParsingFromProtoToXaml : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class MarkupExtensionsParsingFromProtoToXaml : GivenARuntimeTypeSourceWithNodeBuilders
     {
         private readonly IInstructionParser sut;
         

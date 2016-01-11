@@ -2,13 +2,13 @@
 {
     using Builder;
     using Classes;
-    using Common.NetCore;
+    using Common;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
     using Typing;
 
     [TestClass]
-    public class TypeRepositoryTests : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class TypeRepositoryTests : GivenARuntimeTypeSourceWithNodeBuilders
     {
         private readonly Mock<INamespaceRegistry> nsRegistryMock;
         private TypeRepository sut;
@@ -71,7 +71,7 @@
        }     
     }
 
-    public class TypeFeatureProviderTests : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class TypeFeatureProviderTests : GivenARuntimeTypeSourceWithNodeBuilders
     {
         public ITypeFeatureProvider CreateSut()
         {

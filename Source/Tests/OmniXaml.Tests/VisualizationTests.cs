@@ -2,12 +2,12 @@
 {
     using System.Collections.ObjectModel;
     using Classes;
-    using Common.NetCore;
+    using Common;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Visualization;
 
     [TestClass]
-    public class VisualizationTests : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class VisualizationTests : GivenARuntimeTypeSourceWithNodeBuilders
     {     
         [TestMethod]
         public void ConvertToTags()

@@ -4,12 +4,12 @@
     using System.Collections.ObjectModel;
     using System.Linq;
     using Classes;
-    using Common.NetCore;
+    using Common;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Resources;
 
     [TestClass]
-    public class InstructionTreeBuilderTests : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class InstructionTreeBuilderTests : GivenARuntimeTypeSourceWithNodeBuilders
     {
         private readonly InstructionResources source;
 

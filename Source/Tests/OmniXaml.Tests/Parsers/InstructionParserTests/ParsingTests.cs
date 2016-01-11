@@ -4,14 +4,14 @@
     using System.Linq;
     using System.Reflection;
     using Classes;
-    using Common.NetCore;
+    using Common;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using OmniXaml.Parsers.Parser;
     using Resources;
     using Xunit;
 
     [TestClass]
-    public class ParsingTests : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class ParsingTests : GivenARuntimeTypeSourceWithNodeBuilders
     {
         private readonly IInstructionParser sut;
         private readonly ProtoInstructionResources protoResources;

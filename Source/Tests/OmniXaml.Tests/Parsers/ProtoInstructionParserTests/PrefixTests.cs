@@ -5,11 +5,11 @@
     using System.Linq;
     using Classes;
     using Classes.Another;
-    using Common.NetCore;
+    using Common;
     using OmniXaml.Parsers.ProtoParser;
     using Xunit;
 
-    public class PrefixTests : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class PrefixTests : GivenARuntimeTypeSourceWithNodeBuilders
     {
 
         private ProtoInstructionParser CreateSut()

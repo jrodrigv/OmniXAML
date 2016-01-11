@@ -4,13 +4,13 @@
     using System.Collections.ObjectModel;
     using System.Linq;
     using Classes;
-    using Common.NetCore;
+    using Common;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using OmniXaml.Parsers.MarkupExtensions;
     using Resources;
 
     [TestClass]
-    public class MarkupExtensionNodeToXamlNodesConverterTests : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class MarkupExtensionNodeToXamlNodesConverterTests : GivenARuntimeTypeSourceWithNodeBuilders
     {     
         [TestMethod]
         public void NameOnly()

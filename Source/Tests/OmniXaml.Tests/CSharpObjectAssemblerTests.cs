@@ -1,13 +1,13 @@
 ﻿namespace OmniXaml.Tests
 {
-    using Common.NetCore;
+    using Common;
     using ObjectAssembler;
     using Resources;
     using Xunit;
 
-    public class CSharpObjectAssemblerTests : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class CSharpObjectAssemblerTests : GivenARuntimeTypeSourceWithNodeBuilders
     {
-        private InstructionResources source;
+        private readonly InstructionResources source;
 
         public CSharpObjectAssemblerTests()
         {
@@ -16,7 +16,7 @@
 
         private IObjectAssembler CreateSut()
         {
-            return new CSharpObjectAssembler(TypeRuntimeTypeSource, new TopDownValueContext(), new Settings { InstanceLifeCycleListener = new TestListener() });
+            return new Extras.ObjectAssembler.ObjectAssembler(TypeRuntimeTypeSource, new TopDownValueContext(), new Settings { InstanceLifeCycleListener = new TestListener() });
         }
 
         [Fact]
@@ -27,7 +27,7 @@
 
             var result = sut.Result;
 
-            Xunit.Assert.Equal(result, "var root = new DummyClass { };");
+            Assert.Equal("var root = new DummyClass { };", result);
         }
 
         [Fact]
@@ -37,7 +37,7 @@
             sut.Process(source.ObjectWithMember);
 
             var result = sut.Result;
-            Xunit.Assert.Equal(result, "var root = new DummyClass { SampleProperty = \"Property!\", };");
+            Assert.Equal("var root = new DummyClass { SampleProperty = \"Property!\", };", result);
         }
 
         //    [Fact]

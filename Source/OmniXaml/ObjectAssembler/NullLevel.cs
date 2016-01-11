@@ -1,6 +1,6 @@
 namespace OmniXaml.ObjectAssembler
 {
-    internal class NullLevel : Level
+    public class NullLevel : Level
     {
         public NullLevel()
         {

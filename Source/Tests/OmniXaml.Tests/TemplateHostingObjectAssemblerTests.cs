@@ -4,12 +4,12 @@
     using Classes;
     using Classes.Templates;
     using Classes.WpfLikeModel;
-    using Common.NetCore;
+    using Common;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using ObjectAssembler;
 
     [TestClass]
-    public class TemplateHostingObjectAssemblerTests : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class TemplateHostingObjectAssemblerTests : GivenARuntimeTypeSourceWithNodeBuilders
     {
         [TestMethod]
         public void SimpleTest()

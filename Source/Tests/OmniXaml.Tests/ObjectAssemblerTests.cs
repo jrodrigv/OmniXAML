@@ -4,7 +4,7 @@
     using System.Linq;
     using Classes;
     using Classes.WpfLikeModel;
-    using Common.NetCore;
+    using Common;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using ObjectAssembler;
     using Resources;
@@ -12,9 +12,9 @@
     using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
     [TestClass]
-    public class ObjectAssemblerTests : GivenARuntimeTypeSourceWithNodeBuildersNetCore
+    public class ObjectAssemblerTests : GivenARuntimeTypeSourceWithNodeBuilders
     {
-        private InstructionResources source;
+        private readonly InstructionResources source;
         private IObjectAssembler sut;
 
         public ObjectAssemblerTests()

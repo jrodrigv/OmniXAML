@@ -1,8 +1,9 @@
 ﻿namespace OmniXaml.Tests.XamlXmlLoaderTests
 {
+    using Common;
     using Common.NetCore;
 
-    public class GivenAXmlLoader : GivenARuntimeTypeSourceNetCore
+    public class GivenAXmlLoader : GivenARuntimeTypeSource
     {
         protected GivenAXmlLoader()
         {
