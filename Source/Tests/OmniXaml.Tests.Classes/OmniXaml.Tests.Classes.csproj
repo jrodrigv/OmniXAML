@@ -11,10 +11,9 @@
     <AssemblyName>OmniXaml.Tests.Classes</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
-    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -35,6 +34,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="AnotherExtension.cs" />
     <Compile Include="Another\DummyChild.cs" />
@@ -77,7 +82,6 @@
     <Compile Include="WpfLikeModel\WindowWithUserControl.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="project.json" />
     <None Include="WpfLikeModel\MyUserControl.xaml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -113,7 +117,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <PropertyGroup>
-    <NuGetTargetMoniker>.NETPlatform,Version=v5.4</NuGetTargetMoniker>
-  </PropertyGroup>
 </Project>
