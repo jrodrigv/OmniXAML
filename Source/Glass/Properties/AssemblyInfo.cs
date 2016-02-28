@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Glass.Tests.Dnx")]
+[assembly: AssemblyTitle("Glass.Dnx")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Glass.Tests.Dnx")]
+[assembly: AssemblyProduct("Glass.Dnx")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,4 +20,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("da1bb7c4-7f07-4f50-9f36-3a95c9e8a1d9")]
+[assembly: Guid("808310b4-9ea6-485f-a124-1e9b9ab2423a")]

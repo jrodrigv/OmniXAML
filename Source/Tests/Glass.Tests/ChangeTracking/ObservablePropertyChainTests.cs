@@ -1,4 +1,6 @@
-﻿namespace Glass.Tests.ChangeTracking
+﻿//Glass.ChangeTracking depends on Rx
+#if DNX451
+namespace Glass.Tests.ChangeTracking
 {
     using System;
     using Glass.ChangeTracking;
@@ -100,3 +102,4 @@
         }
     }
 }
+#endif
