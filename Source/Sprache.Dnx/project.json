@@ -18,6 +18,6 @@
     }
   },
   "dependencies": {
-    "System.Text.RegularExpressions": "4.0.11-rc2-23608"
+    "System.Text.RegularExpressions": "4.0.11-beta-23516"
   }
 }

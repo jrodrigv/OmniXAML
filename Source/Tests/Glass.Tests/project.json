@@ -8,13 +8,14 @@
   "dependencies": {
     "codeLibrary": "1.0.0-*",
     "Glass": "1.0.0-*",
-    "xunit": "2.2.0-beta1-build3239",
+    "xunit": "2.2.0-*",
     "xunit.runner.dnx": "2.1.0-rc1-build204"
   },
   "commands": {
     "test": "xunit.runner.dnx"
   },
   "frameworks": {
+    "dnx451": { },
     "dnxcore50": { }
   }
 }
