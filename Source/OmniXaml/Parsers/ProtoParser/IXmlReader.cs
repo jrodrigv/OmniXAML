@@ -1,7 +1,7 @@
+using System.Xml;
+
 namespace OmniXaml.Parsers.ProtoParser
 {
-    using System.Xml;
-
     public interface IXmlReader : IXmlLineInfo
     {
         void Read();

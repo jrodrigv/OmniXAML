@@ -7,8 +7,8 @@
 
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>808310b4-9ea6-485f-a124-1e9b9ab2423a</ProjectGuid>
-    <RootNamespace>Glass.Dnx</RootNamespace>
+    <ProjectGuid>7cabba6d-e8ba-4937-8ee7-ac99cb444e65</ProjectGuid>
+    <RootNamespace>OmniXaml.Dnx</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">..\..\artifacts\obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">..\..\artifacts\bin\$(MSBuildProjectName)\</OutputPath>
   </PropertyGroup>
