@@ -1,14 +1,12 @@
 ﻿namespace OmniXaml
 {
     using System;
-    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Linq.Expressions;
     using Glass;
     using Parsers.ProtoParser;
     using Typing;
 
-    [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public class ProtoInstructionBuilder
     {
         private readonly IRuntimeTypeSource typeSource;

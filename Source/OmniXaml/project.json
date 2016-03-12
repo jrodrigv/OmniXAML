@@ -7,7 +7,9 @@
   "licenseUrl": "",
   "frameworks": {
     "net451": {
-      "dependencies": {
+      "frameworkAssemblies": {
+        "System.Xml": "4.0.0.0",
+        "System.Diagnostics.Tools": "4.0.0.0"
       }
     },
     "dotnet5.4": {
@@ -15,12 +17,14 @@
         "Microsoft.CSharp": "4.0.1-beta-23516",
         "System.Collections": "4.0.11-beta-23516",
         "System.Linq": "4.0.1-beta-23516",
-        "System.Runtime": "4.0.21-beta-23516"      }
+        "System.Runtime": "4.0.21-beta-23516",
+        "System.Xml.ReaderWriter": "4.0.11-beta-23516",
+        "System.Diagnostics.Tools": "4.0.1-rc2-23608"
+      }
     }
   },
   "dependencies": {
     "Glass": "1.0.0-*",
-    "Sprache.Dnx": "1.0.0-*",
-    "System.Xml.ReaderWriter": "4.0.11-beta-23516"
+    "Sprache.Dnx": "1.0.0-*" 
   }
 }

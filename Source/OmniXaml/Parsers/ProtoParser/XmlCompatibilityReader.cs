@@ -4,7 +4,7 @@ namespace OmniXaml.Parsers.ProtoParser
     using System.Collections.ObjectModel;
     using System.IO;
     using System.Linq;
-
+    using System.Xml;
     public class XmlCompatibilityReader : IXmlReader
     {
         private readonly XmlReaderSettings settings = new XmlReaderSettings {IgnoreComments = true};
