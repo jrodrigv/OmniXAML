@@ -1,4 +1,4 @@
-﻿namespace Glass.Tests.ChangeTracking
+﻿namespace Glass.ChangeTracking.Tests
 {
     public class DummyViewModel : ViewModel
     {

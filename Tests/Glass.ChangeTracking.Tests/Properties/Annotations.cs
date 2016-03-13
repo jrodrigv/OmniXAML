@@ -8,7 +8,7 @@
 // ReSharper disable InconsistentNaming
 // ReSharper disable CheckNamespace
 
-namespace Glass.Tests.Annotations
+namespace Glass.ChangeTracking.Tests.Annotations
 {
     using System;
 

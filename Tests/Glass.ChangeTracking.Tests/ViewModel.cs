@@ -1,4 +1,4 @@
-﻿namespace Glass.Tests.ChangeTracking
+﻿namespace Glass.ChangeTracking.Tests
 {
     using System.ComponentModel;
     using System.Runtime.CompilerServices;

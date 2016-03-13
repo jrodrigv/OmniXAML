@@ -37,11 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Grace, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Grace.2.4.2\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Grace.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Grace.Net, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Grace.Net.2.4.2\lib\net45\Grace.Net.dll</HintPath>
+      <HintPath>..\..\packages\Grace.2.4.2\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Grace.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -113,23 +109,23 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Glass\Glass.csproj">
+    <ProjectReference Include="..\..\Source\Glass\Glass.csproj">
       <Project>{b719ff91-bc7a-4145-8597-811d504fcfef}</Project>
       <Name>Glass</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\OmniXaml.Services.DotNetFx\OmniXaml.Services.DotNetFx.csproj">
+    <ProjectReference Include="..\..\Source\OmniXaml.Services.DotNetFx\OmniXaml.Services.DotNetFx.csproj">
       <Project>{70b12ebb-e332-402e-baf0-c55f38a6b753}</Project>
       <Name>OmniXaml.Services.DotNetFx</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\OmniXaml.Services.Mvvm\OmniXaml.Services.Mvvm.csproj">
+    <ProjectReference Include="..\..\Source\OmniXaml.Services.Mvvm\OmniXaml.Services.Mvvm.csproj">
       <Project>{7784DA26-90C9-402E-8AAE-6D4D59C22D74}</Project>
       <Name>OmniXaml.Services.Mvvm</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\OmniXaml.Wpf\OmniXaml.Wpf.csproj">
+    <ProjectReference Include="..\..\Source\OmniXaml.Wpf\OmniXaml.Wpf.csproj">
       <Project>{3F5DEBE4-D1D2-4190-9AEA-FDD4065FDED7}</Project>
       <Name>OmniXaml.Wpf</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\OmniXaml\OmniXaml.csproj">
+    <ProjectReference Include="..\..\Source\OmniXaml\OmniXaml.csproj">
       <Project>{0d9cc1de-84c3-40d7-9cc5-b7751e0b25d1}</Project>
       <Name>OmniXaml</Name>
     </ProjectReference>
