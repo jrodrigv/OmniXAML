@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0-*",
+  "description": "OmniXaml.Tests.Common.Dnx Class Library",
+  "authors": [ "jrodriguez" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+  "frameworks": {
+    "net451": { },
+    "dotnet5.4": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.1-beta-23516",
+        "System.Collections": "4.0.11-beta-23516",
+        "System.Linq": "4.0.1-beta-23516",
+        "System.Runtime": "4.0.21-beta-23516",
+        "System.Threading": "4.0.11-beta-23516"
+      }
+    }
+  },
+  "dependencies": {
+    "Glass": "1.0.0-*",
+    "OmniXaml": "1.0.0-*",
+    "OmniXaml.Tests.Classes": "1.0.0-*"
+  }
+}
